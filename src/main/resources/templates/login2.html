@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<!-- Default Layout Import-->
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{common/layouts/defaultLayout}"
+      layout:fragment="Content"
+>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <!-- IN-line JS 영역-->
+    <script th:inline="javascript" type="text/javascript">
+
+    </script>
+
+</head>
+<body>
+<div>
+    <div>로그인</div>
+    <a href="https://kauth.kakao.com/oauth/authorize?client_id=88f077af67004ade2b18e854877842f6&redirect_uri=http://localhost:3000/api/v1/oauth2/kakao&response_type=code">카카오톡 로그인</a>
+</div>
+</div>
+
+</body>
+</html>
