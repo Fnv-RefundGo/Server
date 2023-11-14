@@ -32,7 +32,7 @@ dependencies {
     runtimeOnly 'org.mariadb.jdbc:mariadb-java-client'
     implementation 'org.springframework.boot:spring-boot-starter-oauth2-client'
 
-
+    implementation 'org.springframework.boot:spring-boot-starter-security'
 
 }
 

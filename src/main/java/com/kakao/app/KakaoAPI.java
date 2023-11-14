@@ -30,7 +30,8 @@ public class KakaoAPI {
             sb.append("grant_type=authorization_code");
             sb.append("&client_id=48fd83d251fcb965331886c642ce9d1b");
             sb.append("&redirect_uri=http://localhost:3000/api/v1/oauth2/kakao");
-            sb.append("&code=" + code);
+            sb.append("&code=ynijSlTQX4D542AX1BTV4Mq85UmeNLNDalEeAzemeui7u9KZdsrlZqtHXpMKKw0fAAABi8zikF5PBWDH3LuH7A");
+            //sb.append("&code=" + code);
 
             bw.write(sb.toString());
             bw.flush();
