@@ -1,5 +1,3 @@
-// HomeController.java
-
 package com.kakao.app;
 
 import jakarta.servlet.http.HttpSession;

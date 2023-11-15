@@ -1,5 +1,3 @@
-// KakaoAuthController.java
-
 package com.kakao.app;
 
 import org.springframework.web.bind.annotation.RequestParam;

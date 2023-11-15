@@ -1,5 +1,3 @@
-// KakaoAPI.java
-
 package com.kakao.app;
 
 import com.fasterxml.jackson.databind.JsonNode;
