@@ -1,4 +1,5 @@
-package com.kakao.app;
+/*package com.kakao.app;
 
 public class KakaologinApi {
 }
+*/
