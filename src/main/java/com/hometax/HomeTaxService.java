@@ -27,10 +27,10 @@ public class HomeTaxService {
     }
 
     public String getAccessToken(String code) {
-        // 실제 API 호출 코드를 작성하여 Access Token을 획득
+
         String requestBody = "grant_type=authorization_code&code=" + code;
         String response = restTemplate.postForObject(tokenUrl, requestBody, String.class);
-        // 실제 API 호출 결과에서 Access Token 추출
+
         String accessToken = extractAccessTokenFromResponse(response);
 
         return accessToken;

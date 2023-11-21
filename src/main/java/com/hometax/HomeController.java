@@ -19,7 +19,7 @@ public class HomeController {
     @GetMapping("/auth/homeTax")
     public String homeTaxAuthStart() {
         String authUrl = homeTaxService.getAuthorizationUrl();
-        // authUrl을 클라이언트(웹 브라우저)로 전달하여 홈택스 인증 시작
+
         return authUrl;
     }
 
@@ -33,10 +33,8 @@ public class HomeController {
     public ResponseEntity<String> homeTaxCallback(@RequestParam("code") String code) {
         String accessToken = homeTaxService.getAccessToken(code);
 
-        // 홈택스 간편인증이 완료되면, 사용자에게 카카오톡 메시지 전송
         kakaoMessageService.sendKakaoMessage("userId123", "홈택스 간편인증이 완료되었습니다.");
 
-        // 홈택스 API 결과를 호출하여 처리
         String result = homeTaxService.handleCallback(code);
 
         return ResponseEntity.ok("홈택스 간편인증 및 카카오톡 메시지 전송이 완료되었습니다. 결과: " + result);
