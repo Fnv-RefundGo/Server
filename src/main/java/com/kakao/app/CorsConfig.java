@@ -1,4 +1,4 @@
-/*package com.kakao.app;
+package com.kakao.app;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -20,4 +20,3 @@ public class CorsConfig {
         return new CorsFilter(source);
     }
 }
-*/
