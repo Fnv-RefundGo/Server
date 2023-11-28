@@ -26,15 +26,15 @@ public class CwController {
 
     @GetMapping("/sendKakaoMessage")
     public ResponseEntity<String> sendKakaoMessage() {
-        kakaoMessageService.sendKakaoMessage("userId123", "홈택스 간편인증을 시작합니다.");
+        kakaoMessageService.sendKakaoMessage("userId123", "근로복지공단 간편인증을 시작합니다.");
         return ResponseEntity.ok("카카오톡 메시지 전송 완료");
     }
 
     @GetMapping("/auth/comeWel/callback")
     public ResponseEntity<String> comeWelCallback(@RequestParam("code") String code) {
         String accessToken = comwelService.getAccessToken(code);
-        kakaoMessageService.sendKakaoMessage("userId123", "홈택스 간편인증이 완료되었습니다.");
+        kakaoMessageService.sendKakaoMessage("userId123", "근로복지공단 간편인증이 완료되었습니다.");
         String result = comwelService.handleCallback(code);
-        return ResponseEntity.ok("홈택스 간편인증 및 카카오톡 메시지 전송이 완료되었습니다. 결과: " + result);
+        return ResponseEntity.ok("근로복지공단 간편인증 및 카카오톡 메시지 전송이 완료되었습니다. 결과: " + result);
     }
 }

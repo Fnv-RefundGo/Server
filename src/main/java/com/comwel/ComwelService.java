@@ -46,9 +46,9 @@ public class ComwelService {
 
         String message;
         if ("success".equals(processedResult)) {
-            message = "홈택스 간편인증 및 카카오톡 메시지 전송이 완료되었습니다. 결과: " + processedResult;
+            message = "근로복지공단 간편인증 및 카카오톡 메시지 전송이 완료되었습니다. 결과: " + processedResult;
         } else {
-            message = "홈택스 간편인증 실패. 결과: " + processedResult;
+            message = "근로복지공단 간편인증 실패. 결과: " + processedResult;
         }
 
         return message;
