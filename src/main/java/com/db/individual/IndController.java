@@ -11,13 +11,16 @@ public class IndController {
     @Autowired
     private IndividualRepository individualRepository;
 
-    @PostMapping("/saveIndividual")
-    public String saveIndividual(@RequestBody IndEntity individual) {
-        try {
-            individualRepository.save(individual);
-            return "Data saved successfully";
-        } catch (Exception e) {
-            return "Failed to save data: " + e.getMessage();
+    @PostMapping("/compareIndividual")
+    public String compareIndividual(@RequestBody IndEntity inputIndividual) {
+
+        IndEntity dbIndividual = individualRepository.findById(inputIndividual.getId()).orElse(null);
+
+
+        if (dbIndividual != null && dbIndividual.equals(inputIndividual)) {
+            return "입력된 값과 DB의 값이 일치합니다.";
+        } else {
+            return "입력된 값과 DB의 값이 일치하지 않습니다.";
         }
     }
 }
