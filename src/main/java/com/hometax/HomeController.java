@@ -33,10 +33,4 @@ public class HomeController {
         String result = homeTaxService.handleCallback(code);
         return ResponseEntity.ok("홈택스 간편인증 및 카카오톡 메시지 전송이 완료되었습니다. 결과: " + result);
     }
-
-    //@GetMapping("/point")
-    //public String yourEndpoint() {
-
-    //    return "response";
-    //}
 }
