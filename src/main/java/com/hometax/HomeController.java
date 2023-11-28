@@ -2,12 +2,10 @@ package com.hometax;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.client.RestTemplate;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
+//@CrossOrigin(origins = "*", allowedHeaders = "*")
 public class HomeController {
 
     @Autowired
@@ -19,7 +17,6 @@ public class HomeController {
     @GetMapping("/auth/homeTax")
     public String homeTaxAuthStart() {
         String authUrl = homeTaxService.getAuthorizationUrl();
-
         return authUrl;
     }
 
@@ -32,11 +29,14 @@ public class HomeController {
     @GetMapping("/auth/homeTax/callback")
     public ResponseEntity<String> homeTaxCallback(@RequestParam("code") String code) {
         String accessToken = homeTaxService.getAccessToken(code);
-
         kakaoMessageService.sendKakaoMessage("userId123", "홈택스 간편인증이 완료되었습니다.");
-
         String result = homeTaxService.handleCallback(code);
-
         return ResponseEntity.ok("홈택스 간편인증 및 카카오톡 메시지 전송이 완료되었습니다. 결과: " + result);
     }
+
+    //@GetMapping("/point")
+    //public String yourEndpoint() {
+
+    //    return "response";
+    //}
 }
