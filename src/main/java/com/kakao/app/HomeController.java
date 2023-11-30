@@ -1,4 +1,4 @@
-/*package com.kakao.app;
+package com.kakao.app;
 
 import jakarta.servlet.http.HttpSession;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -43,4 +43,3 @@ public class HomeController {
         return mav;
     }
 }
-*/

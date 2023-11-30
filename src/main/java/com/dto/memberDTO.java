@@ -9,5 +9,4 @@ public class memberDTO {
     private String email;
     private String kakao_id;
     private String phone;
-
 }
